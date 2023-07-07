@@ -1,2 +1,3 @@
-# CHO (Cyclic Homogeneous Oscillation detection method)
-Neural oscillations detection method
+# CHO 
+Cyclic Homogeneous Oscillation detection method (CHO)
+a Neural oscillations detection method
