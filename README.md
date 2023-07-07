@@ -23,5 +23,7 @@ To cite CHO in publications, please use:
 
 Hohyun Cho, and Peter Brunner. US Patent Application No. 18/193,930 entitled “Systems and Methods for Detection of Neurophysiological Signal Oscillations.”
 
+or
+
 Cho et al. (2023). The when, the where, and the what of neural oscillations. bioRxiv, ###. 
 
