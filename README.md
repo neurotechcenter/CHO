@@ -17,7 +17,7 @@ Please don't hesitate to contact the authors of this package if you have any que
 
 # Citation
 
-If you use this software, please cite it.
+Please cite the following publications to use CHO in your research and application.
 
 To cite CHO in publications, please use:
 
