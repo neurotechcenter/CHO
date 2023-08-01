@@ -1,7 +1,7 @@
 # CHO 
 Cyclic Homogeneous Oscillation detection method (CHO), a Neural oscillations detection method
 
-Code for our simulation study and example hippocampal data are included.
+Codes for our simulation study and example hippocampal data are included.
 
 # Information
 
@@ -14,6 +14,10 @@ The simulation codes can be found in figure4BCD.m and figure4EFG.m
 The example code can be found in figure8BCDE.m
 
 Please don't hesitate to contact the authors of this package if you have any questions or suggestions.
+
+# required toolbox
+
+economic toolbox for autocorr()
 
 # Citation
 
