@@ -29,5 +29,5 @@ Hohyun Cho, and Peter Brunner. US Patent Application No. 18/193,930 entitled “
 
 or
 
-Cho et al. (2023). The when, the where, and the what of neural oscillations. bioRxiv, ###. 
+Cho et al. (2023). Novel Cyclic Homogeneous Oscillation Detection Method for High Accuracy and Specific Characterization of Neural Dynamics. bioRxiv, ###. 
 
