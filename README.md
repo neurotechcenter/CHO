@@ -29,5 +29,5 @@ Hohyun Cho, and Peter Brunner. US Patent Application No. 18/193,930 entitled “
 
 or
 
-Cho et al. (2023). Novel Cyclic Homogeneous Oscillation Detection Method for High Accuracy and Specific Characterization of Neural Dynamics. bioRxiv, ###. 
+Cho et al. (2023). Novel Cyclic Homogeneous Oscillation Detection Method for High Accuracy and Specific Characterization of Neural Dynamics. bioRxiv, doi: https://doi.org/10.1101/2023.10.04.560843
 
