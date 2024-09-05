@@ -25,9 +25,9 @@ Please cite the following publications to use CHO in your research and applicati
 
 To cite CHO in publications, please use:
 
-Hohyun Cho, and Peter Brunner. US Patent Application No. 18/193,930 entitled “Systems and Methods for Detection of Neurophysiological Signal Oscillations.”
-
-or
 
 Cho et al. (2023). Novel Cyclic Homogeneous Oscillation Detection Method for High Accuracy and Specific Characterization of Neural Dynamics. bioRxiv, doi: https://doi.org/10.1101/2023.10.04.560843
 
+or
+
+Hohyun Cho, and Peter Brunner. US Patent Application No. 18/193,930 entitled “Systems and Methods for Detection of Neurophysiological Signal Oscillations.”
