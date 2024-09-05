@@ -42,7 +42,9 @@ function [outputs] = CHO_v21(signal, srate, param)
 %
 % Known problems:
 %             
-%
+% required toolboxes: 
+%   economic toolbox for autocorr()
+%   
 %
 
 % 06-03-23 released
