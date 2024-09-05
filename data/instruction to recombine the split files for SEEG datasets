@@ -2,4 +2,4 @@ the way to concat the parts of SEEG datasets
 
 To recombine the split files: If you want to merge the split files back into a single archive, use the following command in the bash:
 
-cat part_* > combined_archive.zip
+cat zs1-6_seeg_resting_data.zip part_of_zs_seeg_dataset_zip_file_* > combined_archive.zip
