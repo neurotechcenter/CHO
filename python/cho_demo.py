@@ -146,6 +146,10 @@ def main():
     for box in boxes:
         tf.add_patch(Rectangle((box.start/fs,box.low),(box.stop-box.start)/fs,box.high-box.low,
                                fill=False,edgecolor="white",linewidth=1.2))
+        tf.annotate(f"{box.center} Hz", ((box.start+box.stop)/(2*fs),box.high),
+                    xytext=(0,9),textcoords="offset points",ha="center",va="bottom",
+                    color="white",fontsize=10,weight="bold",
+                    bbox=dict(boxstyle="round,pad=0.2",fc="#152438",alpha=.9,ec="none"))
     tf.set(xlabel="Time (s)",ylabel="Frequency (Hz)",title=f"Background-corrected envelope · {len(boxes)} detected episodes")
     fig.savefig(args.out/"detections.png",dpi=160)
     print(f"{len(raw)} samples at {fs} Hz; {len(boxes)} episodes. Output: {args.out}")
