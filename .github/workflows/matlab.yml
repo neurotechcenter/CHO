@@ -3,7 +3,6 @@ name: MATLAB example
 on:
   pull_request:
   push:
-    branches: [main, maintenance/engineering-baseline]
   workflow_dispatch:
 
 permissions:
