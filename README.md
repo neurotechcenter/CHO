@@ -2,9 +2,9 @@
 
 CHO is a MATLAB method for detecting oscillatory episodes in neural recordings. The [eLife article](https://elifesciences.org/articles/91605) describes the method. The detector is implemented in [CHO_v22.m](functions/CHO_v22.m).
 
-![Six detected hippocampal oscillations outlined on a time–frequency plot](cho-preview.svg)
+![Six detected hippocampal oscillations labeled with their center frequencies](cho-preview.svg)
 
-White boxes mark the six oscillatory episodes detected by the [Python demo](https://github.com/neurotechcenter/CHO/pull/4) in the hippocampal recording used for Figure 8. The upper trace shows the recording on the same time axis.
+White boxes mark the six oscillatory episodes detected by the [Python demo](https://github.com/neurotechcenter/CHO/pull/4) in the hippocampal recording used for Figure 8. Each label gives the episode’s detected center frequency in Hz.
 
 ## Run the hippocampal example
 
