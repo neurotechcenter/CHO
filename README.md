@@ -1,33 +1,26 @@
-# CHO 
-Cyclic Homogeneous Oscillation detection method (CHO), a Neural oscillations detection method
+# Cyclic Homogeneous Oscillation detection (CHO)
 
-Codes for our simulation study and example hippocampal data are included.
+CHO is a MATLAB method for detecting oscillatory episodes in neural recordings. The [eLife article](https://elifesciences.org/articles/91605) describes the method. The detector is implemented in [CHO_v22.m](functions/CHO_v22.m).
 
-# Information
+## Run the hippocampal example
 
-The Matlab function of CHO is in the 'functions' folder.
+Open the repository root in MATLAB and run:
 
-Please run add_path.m file to run the following codes.
+```matlab
+add_path
+figure8BCDE
+```
 
-The simulation codes can be found in figure4BCD.m and figure4EFG.m
+[figure8BCDE.m](figure8BCDE.m) loads the example hippocampal signal, sets the sampling rate to 500 Hz, and analyzes frequencies from 1 to 40 Hz. With plotting enabled, the detector displays the signal and detected episodes. Inspect `cho_output` in the workspace for the results.
 
-The example code can be found in figure8BCDE.m
+The detector uses MATLAB toolbox functions including `autocorr` (Econometrics Toolbox), `hilbert` (Signal Processing Toolbox), and `bwlabel` (Image Processing Toolbox). For scripts that use FieldTrip or EEGLAB, add the corresponding installation directory to the MATLAB path before running setup.
 
-Please don't hesitate to contact the authors of this package if you have any questions or suggestions.
+## Simulation scripts
 
-# required toolbox
+The simulation examples are [figure4BCD.m](figure4BCD.m) and [figure4EFG.m](figure4EFG.m).
 
-economic toolbox for autocorr()
+## Citation
 
-# Citation
+See the [eLife article](https://elifesciences.org/articles/91605) for the paper and citation. The [2023 bioRxiv preprint](https://doi.org/10.1101/2023.10.04.560843) is also available.
 
-Please cite the following publications to use CHO in your research and application.
-
-To cite CHO in publications, please use:
-
-
-Cho et al. (2023). Novel Cyclic Homogeneous Oscillation Detection Method for High Accuracy and Specific Characterization of Neural Dynamics. bioRxiv, doi: https://doi.org/10.1101/2023.10.04.560843
-
-or
-
-Hohyun Cho, and Peter Brunner. US Patent Application No. 18/193,930 entitled “Systems and Methods for Detection of Neurophysiological Signal Oscillations.”
+Related patent application: Hohyun Cho and Peter Brunner, US Patent Application No. 18/193,930, “Systems and Methods for Detection of Neurophysiological Signal Oscillations.”
