@@ -13,7 +13,7 @@ figure8BCDE
 
 [figure8BCDE.m](figure8BCDE.m) loads the example hippocampal signal, sets the sampling rate to 500 Hz, and analyzes frequencies from 1 to 40 Hz. With plotting enabled, the detector displays the signal and detected episodes. Inspect `cho_output` in the workspace for the results.
 
-The detector uses MATLAB toolbox functions including `autocorr` (Econometrics Toolbox), `hilbert` (Signal Processing Toolbox), and `bwlabel` (Image Processing Toolbox). For scripts that use FieldTrip or EEGLAB, add the corresponding installation directory to the MATLAB path before running setup.
+The detector uses MATLAB toolbox functions including `autocorr` (Econometrics Toolbox), `hilbert` (Signal Processing Toolbox), `bwlabel` (Image Processing Toolbox), and `optimoptions`/`lsqcurvefit` (Optimization Toolbox). For scripts that use FieldTrip or EEGLAB, add the corresponding installation directory to the MATLAB path before running setup.
 
 ## Simulation scripts
 
