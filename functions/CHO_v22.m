@@ -1,5 +1,5 @@
 function [outputs] = CHO_v22(signal, srate, param)
-% CHO_v16() - Return detected bounding boxes of oscillations, 1/f fitting output,
+% CHO_v22() - Return detected bounding boxes of oscillations, 1/f fitting output,
 %                and the std of the input signal
 %
 %           * Each bounding box has following attributes:
@@ -18,7 +18,7 @@ function [outputs] = CHO_v22(signal, srate, param)
 %               modelfun = @(b,x) b(1) - log10(b(2) + x(:,1).^b(3));      
 %
 % Usage: 
-%       >>  [cho_output] = CHO_v21(data, srate, param);    
+%       >>  [cho_output] = CHO_v22(data, srate, param);    
 %
 % NOTE: 
 %       * none
