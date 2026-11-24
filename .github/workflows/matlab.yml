@@ -1,0 +1,51 @@
+name: MATLAB example
+
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: matlab-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  hippocampal-example:
+    name: Hippocampal example / R2026a
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out code and the example fixture
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/data/*
+            /data/data_for_figure8.mat
+      - name: Set up MATLAB and required toolboxes
+        uses: matlab-actions/setup-matlab@f9e43010f1ae678f7cfa0542fe2a4f60f7d1ad8d # v3
+        with:
+          release: R2026a
+          products: >
+            Econometrics_Toolbox
+            Signal_Processing_Toolbox
+            Image_Processing_Toolbox
+            Optimization_Toolbox
+      - name: Run the README example regression test
+        uses: matlab-actions/run-tests@214a16e600ef2c705a4b2dd6c0794dc6957682a9 # v3
+        with:
+          select-by-folder: tests
+          test-results-junit: artifacts/test-results.xml
+      - name: Preserve results and example figure
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: hippocampal-example-results
+          path: artifacts/
+          if-no-files-found: warn
+          retention-days: 14

@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use CHO, please cite the article in preferred-citation."
+type: software
+title: "Cyclic Homogeneous Oscillation detection (CHO)"
+authors:
+  - family-names: Cho
+    given-names: Hohyun
+repository-code: "https://github.com/neurotechcenter/CHO"
+license: MIT
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Cho
+      given-names: Hohyun
+    - family-names: Adamek
+      given-names: Markus
+    - family-names: Willie
+      given-names: Jon T
+    - family-names: Brunner
+      given-names: Peter
+  title: "Novel cyclic homogeneous oscillation detection method for high accuracy and specific characterization of neural dynamics"
+  journal: eLife
+  year: 2024
+  volume: "12"
+  start: RP91605
+  doi: 10.7554/eLife.91605.3
+  url: "https://doi.org/10.7554/eLife.91605.3"

@@ -1,0 +1,9 @@
+# Local MATLAB state and editor backups
+.DS_Store
+*.asv
+*.m~
+matlab_crash_dump.*
+java.log.*
+/matlab.settings
+# Generated test evidence; the bundled data/*.mat fixtures remain tracked.
+/artifacts/
