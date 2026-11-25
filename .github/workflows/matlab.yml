@@ -1,4 +1,4 @@
-name: MATLAB example
+name: MATLAB CHO examples
 
 on:
   pull_request:
@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   hippocampal-example:
-    name: Hippocampal example / R2026a
+    name: Wavelet v27 and legacy v22 / R2026a
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
@@ -36,7 +36,8 @@ jobs:
             Signal_Processing_Toolbox
             Image_Processing_Toolbox
             Optimization_Toolbox
-      - name: Run the README example regression test
+            Statistics_and_Machine_Learning_Toolbox
+      - name: Run wavelet and legacy example regression tests
         uses: matlab-actions/run-tests@214a16e600ef2c705a4b2dd6c0794dc6957682a9 # v3
         with:
           select-by-folder: tests
@@ -45,7 +46,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
-          name: hippocampal-example-results
+          name: cho-example-results
           path: artifacts/
           if-no-files-found: warn
           retention-days: 14

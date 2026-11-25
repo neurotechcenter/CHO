@@ -4,16 +4,16 @@ Use a separate branch and submit a pull request against `main`. Keep each change
 
 ## Set up and test
 
-Install MATLAB with Econometrics Toolbox, Signal Processing Toolbox, Image Processing Toolbox, and Optimization Toolbox. From the repository root in a fresh MATLAB session, run:
+Install MATLAB with Econometrics Toolbox, Signal Processing Toolbox, Image Processing Toolbox, Optimization Toolbox, and Statistics and Machine Learning Toolbox. From the repository root in a fresh MATLAB session, run:
 
 ```matlab
 results = runtests('tests');
 assertSuccess(results);
 ```
 
-The regression test executes `add_path` and `figure8BCDE` in an isolated function workspace, checks the bundled signal and output, verifies the new figure, and writes a PNG and MAT result to `artifacts/`. It restores the current folder, search path, default figure visibility, and closes only figures created by the test. The public example's `clear` command does not clear the caller's workspace.
+Tests run the v27 research preset and function defaults, check edge cases and warning-state preservation, and retain the v22 `figure8BCDE` regression. They check outputs and figures and write PNG/MAT artifacts to `artifacts/`. Cleanup restores session settings and closes only figures created by the tests. The v22 script's `clear` command is isolated from the caller's workspace.
 
-GitHub Actions runs the same test on Ubuntu with MATLAB R2026a and the required toolboxes, and retains test results and the figure as downloadable artifacts. This check covers the included hippocampal example; it does not reproduce the full paper's simulation suite.
+GitHub Actions runs these tests on Ubuntu with MATLAB R2026a and the required toolboxes. These checks cover examples and output contracts; they do not reproduce the full paper's simulation suite or establish detection performance. Keep private recordings and identifiers out of public fixtures and logs.
 
 ## Report a problem
 
