@@ -2,6 +2,21 @@
 
 CHO detects oscillatory episodes in neural recordings. **The current research implementation is the wavelet-based `CHO_v27`.** This snapshot includes the fixed 8-cycle configuration used in the UAB seizure research analyses, its dependencies, and a runnable public example. The earlier v22 implementation remains available for manuscript reproduction.
 
+## Choose a version
+
+| | v22 legacy example | v27 function defaults | v27 UAB research preset |
+| --- | --- | --- | --- |
+| Use | Reproduce the earlier manuscript example | Use the newer detector's built-in settings | Reproduce the configuration used in the UAB analyses |
+| Frequency representation | FFT bandpass + Hilbert envelope | Custom complex Morlet wavelets | Custom complex Morlet wavelets |
+| Wavelet cycles | Not applicable | 3–10 across the analyzed frequency grid | Fixed 8 |
+| Analysis range | 1–40 Hz in the example | 1–40 Hz | 1–150 Hz; earlier UAB review runs also used 1–100 Hz |
+| Minimum episode cycles | 2 in the example | 2 | 3 |
+| Merging | Filtered-signal correlation | Wavelet-signal correlation/overlap; fast fallback above 250 boxes | Fast time-frequency overlap |
+| Public-fixture episodes | 6 | 5 | 7 |
+| Entry point | `figure8BCDE` | `CHO_v27(signal, fs)` | `example_CHO_v27`, or `CHO_v27(signal, fs, cho_v27_parameters())` |
+
+See the **[v22–v27 comparison and technical specification](docs/VERSION_COMPARISON.md)** for the exact ACF checks, background-fit differences, parameter defaults, input/output units, dependency matrix, and migration examples. The episode counts above are regression results for one public recording; the configurations differ, so these counts are not an accuracy ranking.
+
 ## Try the wavelet v27 example
 
 Get the [v27 branch](https://github.com/neurotechcenter/CHO/tree/wavelet-v27). For a small checkout containing the code and example signal, without the larger manuscript datasets:
@@ -40,7 +55,7 @@ Tested with **MATLAB R2026a Update 3** on Apple silicon. The automated workflow 
 | Signal Processing Toolbox | `tukeywin`; `hilbert` in v22 |
 | Image Processing Toolbox | `bwlabel` |
 | Optimization Toolbox | `optimoptions`, `lsqcurvefit` |
-| Statistics and Machine Learning Toolbox | `ttest2` in the original v27 fitting helper; `corr` for correlation merging |
+| Statistics and Machine Learning Toolbox | `corr` in v22/v27 correlation merging; `ttest2` in the original v27 fitting helper |
 
 The custom Morlet-wavelet functions are included; MATLAB Wavelet Toolbox is not required. The public examples do not require FieldTrip or EEGLAB. Some historical scripts use those packages.
 
